@@ -2,7 +2,7 @@
 FROM node:10
 
 LABEL "com.github.actions.name"="Hexo Deploy"
-LABEL "com.github.actions.description"="This action will run hexo deploy"
+LABEL "com.github.actions.description"="This GitHub action will handle the building and deploying process of hexo project."
 LABEL "com.github.actions.icon"="git-commit"
 LABEL "com.github.actions.color"="orange"
 

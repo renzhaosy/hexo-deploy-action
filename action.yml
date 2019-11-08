@@ -1,0 +1,9 @@
+name: 'Hexo Deploy Action'
+description: 'This GitHub action will handle the building and deploying process of hexo project.'
+author: 'renzhaosy'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+branding:
+  icon: 'git-commit'
+  color: 'orange'
