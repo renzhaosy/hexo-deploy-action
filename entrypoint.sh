@@ -32,10 +32,6 @@ REPOSITORY_PATH="https://x-access-token:${PERSONAL_TOKEN}@github.com/${PRO_REPOS
 # deploy to 
 echo "Deploy to ${PRO_REPOSITORY}"
 
-# Installs Git and jq.
-apt-get update && \
-apt-get install -y git && \
-
 # Directs the action to the the Github workspace.
 cd $GITHUB_WORKSPACE 
 
@@ -47,7 +43,12 @@ echo "Clean folder ..."
 ./node_modules/hexo/bin/hexo clean
 
 echo "Generate file ..."
-./node_modules/hexo/bin/hexo generate 
+./node_modules/hexo/bin/hexo generate
+
+echo "copy CNAME if exists"
+if [ -n "${CNAME}" ]; then
+    echo $CNAME > public
+fi
 
 cd $PUBLISH_DIR
 
