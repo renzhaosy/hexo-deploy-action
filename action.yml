@@ -1,6 +1,6 @@
-name: 'Hexo Deploy Action'
+name: 'Hexo Deploy Action With CNAME'
 description: 'This GitHub action will handle the building and deploying process of hexo project.'
-author: 'renzhaosy'
+author: 'y4code'
 runs:
   using: 'docker'
   image: 'Dockerfile'
